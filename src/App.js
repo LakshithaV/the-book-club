@@ -3,6 +3,7 @@ import BookDetails from "./components/BookDetails";
 import Create from "./components/create";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route exact path="/books/:id">
               <BookDetails />
+            </Route>
+            <Route exact path="*">
+              <NotFound />
             </Route>
           </Switch>
         </div>
